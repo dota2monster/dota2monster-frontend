@@ -7,6 +7,9 @@ module.exports = function(defaults) {
     // Add options here
   });
 
+  app.import('vendor/theme/pace-master/pace.js');
+  app.import('vendor/theme/pace-master/pace-theme-flash.css');
+
   // Use `app.import` to add additional libraries to the generated
   // output files.
   //
