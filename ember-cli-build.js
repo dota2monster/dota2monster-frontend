@@ -10,6 +10,18 @@ module.exports = function(defaults) {
   app.import('vendor/theme/pace-master/pace.js');
   app.import('vendor/theme/pace-master/pace-theme-flash.css');
 
+  app.import('vendor/theme/bootstrap/js/bootstrap.js');
+  app.import('vendor/theme/bootstrap/css/bootstrap.css');
+  app.import('vendor/theme/bootstrap/fonts/glyphicons-halflings-regular.ttf', {
+    destDir: 'assets'
+  });
+
+  app.import('vendor/theme/modern/modern.css');
+  app.import('vendor/theme/modern/modern.white');
+
+  app.import('vendor/theme/waves/waves.js');
+  app.import('vendor/theme/waves/waves.css');
+
   // Use `app.import` to add additional libraries to the generated
   // output files.
   //
