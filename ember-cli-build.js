@@ -7,11 +7,19 @@ module.exports = function(defaults) {
     // Add options here
   });
 
-  app.import('vendor/theme/pace-master/pace.js');
-  app.import('vendor/theme/pace-master/pace-theme-flash.css');
+  if(!process.env.EMBER_CLI_FASTBOOT){
+    app.import('vendor/theme/pace-master/pace.js');
 
-  app.import('vendor/theme/bootstrap/js/bootstrap.js');
+    app.import('vendor/theme/bootstrap/js/bootstrap.js');
+
+    app.import('vendor/theme/waves/waves.js');
+  }
+
+  app.import('vendor/theme/pace-master/pace-theme-flash.css');
   app.import('vendor/theme/bootstrap/css/bootstrap.css');
+
+  app.import('vendor/theme/modern/modern.css');
+  app.import('vendor/theme/modern/white.css');
 
   ['ttf', 'woff', 'woff2'].forEach((ext) => {
     app.import('vendor/theme/bootstrap/fonts/glyphicons-halflings-regular.' + ext , {
@@ -19,10 +27,6 @@ module.exports = function(defaults) {
     });
   });
 
-  app.import('vendor/theme/modern/modern.css');
-  app.import('vendor/theme/modern/white.css');
-
-  app.import('vendor/theme/waves/waves.js');
   app.import('vendor/theme/waves/waves.css');
 
   app.import('vendor/theme/fontawesome/css/font-awesome.css');
@@ -31,6 +35,7 @@ module.exports = function(defaults) {
       destDir: 'fonts'
     });
   });
+
 
   // Use `app.import` to add additional libraries to the generated
   // output files.
